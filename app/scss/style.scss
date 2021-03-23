@@ -1,0 +1,675 @@
+@import "vars";
+@import "fonts";
+@import "global";
+
+.header {
+    display: flex;
+
+    &__inner {
+        background-image: url('../images/top-left.jpg');
+        background-repeat: no-repeat;
+        width: 74%;
+        min-height: 700px;
+        position: relative;
+    }
+
+    &__logo {
+        color: #c44c4c;
+
+        span {
+            color: inherit;
+            @extend %segoeui-semibold;
+            font-size: 24px;
+        }
+    }
+
+    &__left {
+        display: flex;
+        justify-content: space-between;
+        padding-left: 33px;
+        padding-top: 33px;
+    }
+
+    &__top {
+        display: flex;
+    }
+
+    &__top-login {
+        margin-right: 19px;
+        @extend %segoeui-light;
+        font-size: 14px;
+    }
+
+    &__basket {
+        margin-right: 40px;
+    }
+
+    &__form {
+        margin-right: 28px;
+    }
+
+    &__slider {
+        padding-left: 70px;
+    }
+
+    &__item {
+        display: flex;
+        padding-top: 135px;
+        min-height: 500px;
+    }
+
+    &__item-title {
+        @extend %segoeui-light;
+        font-size: 34px;
+        line-height: 28px;
+        text-transform: uppercase
+    }
+
+    &__item-descr {
+        @extend %segoeui-light;
+        font-size: 14px;
+        margin-top: 14px;
+        text-transform: uppercase;
+    }
+
+    &__item-price {
+        @extend %segoeui-semibold;
+        font-size: 17px;
+        margin-top: 14px;
+
+    }
+
+    &__button {
+        margin-top: 30px;
+    }
+
+    &__item-btn {
+        @extend %segoeui-semibold;
+        margin-top: 30px;
+        font-size: 16px;
+        text-transform: uppercase;
+        border: 1px solid #c44c4c;
+        color: #c44c4c;
+        padding: 10px 30px;
+        border-radius: 30px;
+        outline: none;
+
+
+        &:hover {
+            background-color: #c44c4c;
+            color: #fff;
+            transition: .4s ease-in-out;
+        }
+    }
+
+    //slider
+
+    &__item {
+        position: relative;
+    }
+
+    &__item-img {
+        position: absolute;
+        top: 76px;
+        left: 190px;
+    }
+
+    .slick-dots {
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .slick-dots button {
+        font-size: 0;
+        width: 9px;
+        height: 9px;
+        padding: 0;
+        margin: 0 4px;
+
+        border: none;
+        border-radius: 50%;
+
+        background: none;
+        background-color: #313131;
+    }
+
+    .slick-slide {
+        outline: none;
+    }
+
+    .slick-active button {
+        background-color: #c44c4c;
+        outline: none;
+    }
+
+
+
+    // navigation
+    &__navi {
+        background-image: url('../images/top-right.jpg');
+        background-repeat: no-repeat;
+        width: 26%;
+
+    }
+
+    &__navi-inner {
+        margin-top: 170px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+
+    }
+
+    &__nav-left {
+        margin-right: 85px;
+    }
+
+    &__nav-list {
+        @extend %segoeui-regular;
+        font-size: 14px;
+        line-height: 15px;
+        color: #fff;
+        text-transform: uppercase;
+    }
+
+    &__nav-item:not(:first-child) {
+        margin-top: 110px;
+    }
+
+    &__nav-link {
+        transition: transform .5s ease-out;
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+
+        &::after {
+            display: block;
+            content: "";
+            background-color: #c44c4c;
+            height: 3px;
+            width: 0%;
+            left: 50%;
+            bottom: -12px;
+            position: absolute;
+            -webkit-transition: width .3s ease-in-out;
+            -moz--transition: width .3s ease-in-out;
+            transition: width .3s ease-in-out;
+            -webkit-transform: translateX(-50%);
+            -moz-transform: translateX(-50%);
+            transform: translateX(-50%);
+        }
+
+        &:hover:after,
+        &:focus:after {
+            width: 100%;
+        }
+    }
+}
+
+.product {
+    &__inner {
+        margin: 0 auto;
+        position: relative;
+        padding-bottom: 50px;
+    }
+
+    &__title {
+        font-size: 28px;
+        line-height: 22px;
+        padding-top: 50px;
+        @extend %segoeui-regular;
+        text-transform: uppercase;
+        color: #4d4d4d;
+    }
+
+    &__best-items {
+        display: flex;
+    }
+
+    &__best-item {
+        @extend %segoeui-semibold;
+        margin: 0 50px;
+        margin-top: 50px;
+        justify-content: center;
+        text-align: center;
+        text-transform: uppercase;
+        outline: none;
+    }
+
+    &__name {
+        font-size: 16px;
+        line-height: 1;
+        margin-top: 32px;
+    }
+
+    &__desct {
+        font-size: 13px;
+        line-height: 1;
+        margin-top: 13px;
+    }
+
+    &__price {
+        font-size: 13px;
+        line-height: 1;
+        margin-top: 13px;
+        color: #c44c4c;
+    }
+
+    //slider
+
+    .slick-arrow {
+        min-width: 0;
+        background: none;
+        border: none;
+        font-size: 0;
+    }
+
+    .slider-btn {
+        top: -30px;
+        right: 0;
+        cursor: pointer;
+        outline: none;
+        position: absolute;
+
+        svg {
+            stroke: #c44c4c;
+        }
+
+        &__left {
+            right: 40px;
+        }
+
+    }
+
+    .slick-slide img {
+        max-width: 235px;
+        min-height: 230px;
+    }
+}
+
+.preview {
+    background-image: url('../images/bg_img.jpg');
+    background-repeat: no-repeat;
+
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    &__bg {
+        border: 1px solid #eaeaea;
+        background-color: #eaeaea;
+        border-radius: 50%;
+
+        width: 165px;
+        height: 165px;
+
+        margin-top: 180px;
+        margin-left: 52px;
+
+        box-shadow: 8px 10px 30px 0px rgba(2, 2, 2, 0.2);
+    }
+
+    &__bg-inner {
+        color: #c44c4c;
+        padding-left: 33px;
+        padding-top: 44px;
+        text-transform: uppercase;
+    }
+
+    &__bg-price {
+        font-size: 54px;
+        line-height: 36px;
+    }
+
+    &__bg-off {
+        font-size: 33px;
+        line-height: 24px;
+        padding-top: 15px;
+        padding-left: 24px;
+    }
+
+    &__title {
+        @extend %segoeui-italic;
+        font-size: 60px;
+        text-transform: uppercase;
+        color: #fff;
+        position: absolute;
+        top: 324px;
+        left: 179px;
+    }
+
+    &__slider {
+        max-width: 370px;
+        max-height: 560px;
+
+        padding: 20px 100px 80px 80px;
+        margin: 67px 75px 67px 0;
+        position: relative;
+        text-align: center;
+
+        border: 1px solid #fff;
+        background-color: #fff;
+        box-shadow: 8px 10px 30px 0px rgba(2, 2, 2, 0.2);
+    }
+
+    &__slider-item {
+        outline: none;
+    }
+
+
+    &__slider-title {
+        @extend %segoeui-semibold;
+        font-size: 32px;
+        line-height: 26px;
+        padding-top: 32px;
+    }
+
+    &__slider-descr {
+        font-size: 12px;
+        line-height: 12px;
+        padding-top: 14px;
+        color: #acacac;
+        text-transform: uppercase;
+    }
+
+    &__slider-price {
+        @extend %segoeui-semibold;
+        font-size: 24px;
+        line-height: 22px;
+        color: #acacac;
+        padding-top: 34px;
+    }
+
+    &__button {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    &__slider-btn {
+        @extend %segoeui-semibold;
+        padding: 10px 30px;
+        font-size: 16px;
+        text-transform: uppercase;
+        border: 1px solid #c44c4c;
+        color: #c44c4c;
+        border-radius: 30px;
+
+
+        &:hover {
+            background-color: #c44c4c;
+            color: #fff;
+            transition: .4s ease-in-out;
+        }
+    }
+
+    //slider 
+    .slick-dots {
+        display: flex;
+        justify-content: center;
+    }
+
+    .slick-dots button {
+        font-size: 0;
+        width: 9px;
+        height: 9px;
+        padding: 0;
+        margin: 0 4px;
+
+        border: none;
+        border-radius: 50%;
+
+        background: none;
+        background-color: #313131;
+    }
+
+    .slick-active button {
+        background-color: #c44c4c;
+        outline: none;
+    }
+
+}
+
+.products {
+    &__inner {
+        margin: 0 auto;
+        position: relative;
+        padding-bottom: 50px;
+        padding-top: 60px;
+    }
+
+    &__title {
+        font-size: 28px;
+        line-height: 22px;
+        padding-top: 50px;
+        @extend %segoeui-regular;
+        text-transform: uppercase;
+        color: #4d4d4d;
+    }
+
+    &__top-women {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    &__top-woman {
+        @extend %segoeui-semibold;
+        margin: 0 auto;
+        padding-top: 50px;
+        justify-content: center;
+        text-align: center;
+        outline: none;
+    }
+
+    &__name {
+        font-size: 16px;
+        line-height: 1;
+        margin-top: 32px;
+    }
+
+    &__desct {
+        font-size: 13px;
+        line-height: 1;
+        margin-top: 13px;
+    }
+
+    &__price {
+        font-size: 13px;
+        line-height: 1;
+        margin-top: 13px;
+        color: #c44c4c;
+    }
+
+    &__title-men {
+        font-size: 28px;
+        line-height: 22px;
+        @extend %segoeui-regular;
+        text-transform: uppercase;
+        color: #4d4d4d;
+        padding-top: 110px;
+        padding-bottom: 20px;
+    }
+
+
+    &__top-men {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    &__top-man {
+        @extend %segoeui-semibold;
+        margin: 0 auto;
+        padding-top: 50px;
+        justify-content: center;
+        text-align: center;
+        outline: none;
+    }
+
+
+    //slider
+    .slick-arrow {
+        min-width: 0;
+        background: none;
+        border: none;
+        font-size: 0;
+    }
+
+    .slider-btn {
+        top: -30px;
+        right: 0;
+        cursor: pointer;
+        outline: none;
+        position: absolute;
+
+        svg {
+            stroke: #c44c4c;
+        }
+
+        &__left {
+            right: 40px;
+        }
+
+    }
+
+    .slick-slide img {
+        max-width: 235px;
+        min-height: 230px;
+        margin: 0 auto;
+    }
+
+}
+
+.subscribe {
+    background-image: url('../images/asd.png');
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__title {
+        @extend %segoeui-semibold;
+        font-size: 30px;
+        text-transform: uppercase;
+        line-height: 25px;
+        padding-top: 150px;
+        padding-bottom: 55px;
+    }
+
+    &__input {
+        width: 25%;
+        min-height: 45px;
+        background-color: transparent;
+        border: 1px solid #c4c4c4;
+        padding-left: 15px;
+        padding-top: 2px;
+        outline: none;
+        cursor: pointer;
+    }
+
+    &__btn {
+        margin-top: 35px;
+        margin-bottom: 119px;
+        cursor: pointer;
+        border: 1px solid #c44c4c;
+        background-color: transparent;
+        text-transform: uppercase;
+        font-size: 16px;
+        line-height: 13px;
+        color: #c44c4c;
+        padding: 16px 56px;
+        border-radius: 30px;
+        outline: none;
+        transition: .5s ease-in-out;
+
+        &:hover {
+            background-color: #c44c4c;
+            color: #fff;
+
+        }
+    }
+}
+
+.info {
+    background-color: #2b2c30;
+
+    &__inner {
+        display: flex;
+        padding-top: 57px;
+        padding-bottom: 40px;
+        color: #fff;
+
+    }
+
+    &__item1 {
+        padding-left: 200px;
+    }
+
+    &__item2 {
+        padding-left: 170px;
+    }
+
+    &__item3 {
+        padding-left: 200px;
+    }
+
+    &__item4 {
+        padding-left: 190px;
+    }
+
+    &__title {
+        @extend %segoeui-semibold;
+        font-size: 14px;
+        line-height: 12px;
+        padding-bottom: 25px;
+    }
+
+    &__list {
+        padding-bottom: 14px;
+    }
+
+    &__link {
+        @extend %segoeui-regular;
+        font-size: 14px;
+        color: #888888;
+
+
+        &:hover {
+            transition: .3s linear;
+            color: #fff;
+        }
+    }
+
+    &__title2 {
+        @extend %segoeui-semibold;
+        font-size: 14px;
+        line-height: 12px;
+
+        padding-top: 20px;
+        padding-bottom: 25px;
+    }
+
+    &__link-img:not(:last-child) {
+        padding-right: 20px;
+    }
+
+    .footer {
+        background-color: #141518;
+        display: flex;
+        justify-content: center;
+        padding-top: 15px;
+        padding-bottom: 20px;
+
+        &__text {
+            color: #919191;
+        }
+    }
+
+}
